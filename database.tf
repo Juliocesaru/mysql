@@ -3,8 +3,9 @@ provider "azurerm" {
 }
 
 resource "azurerm_mysql_server" "mysqlapps" {
-  name                = "example-mysql-server"
+  name                = "example-mysqlserver"
   location            = azurerm_resource_group.juliosqlserver.location
+  resource_group_name = azurerm_resource_group.juliosqlserver.name
    
   administrator_login          = "var.administrator_login"
   administrator_login_password = "var.administrator_login_password"
