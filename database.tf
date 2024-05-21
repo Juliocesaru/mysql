@@ -4,7 +4,7 @@ resource "azurerm_mssql_server" "sqlservercreation" {
   name                         = each.value.name
   resource_group_name          = azurerm_resource_group.juliosqlserver.name
   location                     = azurerm_resource_group.juliosqlserver.location
-  version                      = "var.version-number"
+  version                      = "12.0"
 
   administrator_login          = "var.administrator_login"
   administrator_login_password = "var.administrator_login_password"
