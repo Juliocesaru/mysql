@@ -1,9 +1,12 @@
 resource "azurerm_mssql_server" "sqlservercreation" {
-  for_each = {for mssqlserver in local.juliosqlserver_app_list : "${mssqlserver.name}" => mssqlsesrver}
- 
+  for_each = {for mssqlserver in local.juliosqlserver_app_list : mssqlserver.name => mssqlserver}
+
   name                         = each.value.name
-  resource_group_name          = azurerm_resource_group.juliosqlserver.name
-  location                     = azurerm_resource_group.juliosqlserver.location
+  resource_group_name          = each.value.resource_group_name
+  location                     = each.value.location
+  ...
+}
+
   version                      = "12.0"
 
   administrator_login          = "var.administrator_login"
