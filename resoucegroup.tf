@@ -5,7 +5,7 @@ variable "adminstrator_login_password" {
 }
 
 # Create a resource group
-resource "azurerm_resource_group" "example" {
+resource "azurerm_resource_group" "juliosqlserver" {
   name     = "example-resources"
   location = "Central canada"
 }
