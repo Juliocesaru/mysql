@@ -12,6 +12,7 @@ variable "tenant_id" {
 }
 
 variable "administrator_login" {
+  default = "default_password"
   type = string
 }
 variable "adminstrator_login_password" {
