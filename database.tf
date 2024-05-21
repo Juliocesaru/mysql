@@ -4,8 +4,7 @@ resource "azurerm_mssql_server" "sqlservercreation" {
   name                         = each.value.name
   resource_group_name          = azurerm_resourse_group.juliomcit.name
   location                     = azurerm_resourse_group.juliomcit.location
-  ...
-}
+  
 
   version                      = "12.0"
 
