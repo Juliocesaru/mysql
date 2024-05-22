@@ -12,8 +12,7 @@ variable "tenant_id" {
 }
 
 variable "administrator_login" {
-  description = "juliomcit"
-  default     = "default_admin"
+  type=string
 }
 
 variable "administrator_login_password" {
