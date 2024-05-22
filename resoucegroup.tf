@@ -1,5 +1,5 @@
 # Create a resource group
 resource "azurerm_resource_group" "juliosqlserver" {
-  name     = "example-resources"
+  name     = var.myresourcegroupname
   location = "Central canada"
 }
