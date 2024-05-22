@@ -14,7 +14,7 @@ resource "azurerm_mssql_server" "sqlservercreation" {
   minimum_tls_version          = "1.2"
 
   azuread_administrator {
-    login_username = "juliomcit"
+    login_username = "AzureAD Admin"
     object_id      = "3a6e367c-4c7e-4672-83e5-d27c4f749e2a"
   }
 
