@@ -1,5 +1,5 @@
 resource "azurerm_mssql_server" "sqlservercreation" {
-  for_each = {for mssqlserver in local.juliosqlserver_app_list : mssqlserver.name => mssqlserver}
+  for_each = {for mssqlserver in local.juliomcit : mssqlserver.name => mssqlserver}
 
   name                         = each.value.name
   resource_group_name          = azurerm_resourse_group.juliosqlserver.name
