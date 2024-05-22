@@ -16,7 +16,7 @@ variable "administrator_login" {
   default     = "default_admin"
 }
 
-variable "adminstrator_login_password" {
+variable "administrator_login_password" {
   type = string
  }
 
