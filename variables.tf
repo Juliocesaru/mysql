@@ -18,8 +18,7 @@ variable "administrator_login" {
 
 variable "adminstrator_login_password" {
   type = string
-  default = "Juliana3103$
-}
+ }
 
 variable "version-number" {
   type = string
